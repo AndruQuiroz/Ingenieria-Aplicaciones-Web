@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { books } from "../data/books.js";
+import { books } from "../data/Books.js";
 import { Book } from "../models/Book.js";
 
 export class HomeController {
@@ -24,11 +24,5 @@ export class HomeController {
   static show(req: any, res: any) {
     const book = Book.findById(books, parseInt(req.params.id));
     res.render("home/show", { book: book });
-  }
-
-  static contact(req: Request, res: Response): void {
-    const viewData: { [key: string]: any } = {};
-    viewData["title"] = "Contact";
-    res.render("home/contact", { viewData: viewData });
   }
 }
