@@ -32,8 +32,7 @@
 
 <i class="fas fa-graduation-cap text-2xl mr-3 text-blue-400"></i>
 
-<span class="font-bold text-xl">Library Dashboard</span
-
+<span class="font-bold text-xl">Library Dashboard</span>
 </div>
 
 
@@ -55,17 +54,14 @@
 
 </a>
 
-<nav class="space-y-2">
+<a href="/main-point" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-700
+transition duration-200">
 
-<a href="/contact" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-700 transition duration-200">
+<i class="fas fa-book mr-3"></i>
 
-<i class="fas fa-home mr-3"></i>
-
-<span>Contact</span>
+<span>Books</span>
 
 </a>
-
-</nav>
 
 </div>
 
@@ -108,8 +104,9 @@
 <div>
 
 <h1 class="text-2xl font-bold text-gray-800">
-
-<%= viewData.title %>
+    <% if (typeof viewData !== 'undefined') { %>
+        <%= viewData.title %>
+    <% } %>
 
 </h1>
 
